@@ -2,6 +2,7 @@
 import sys
 import os
 from time import sleep
+import pyfiglet
 
 def argToTime(t):
     os.system('clear')
@@ -13,14 +14,17 @@ def argToTime(t):
         os.system('clear')
 
         if minutes < 10 and seconds < 10:
-            print(f'0{minutes}:0{seconds}')
+            currentTime = pyfiglet.figlet_format(f'0{minutes} : 0{seconds}')
+            print(currentTime)
         elif minutes < 10:
-            print(f'0{minutes}:{seconds}')
+            currentTime = pyfiglet.figlet_format(f'0{minutes} : {seconds}')
+            print(currentTime)
         elif seconds < 0:
-            print(f'{minutes}:0{seconds}')
+            currentTime = pyfiglet.figlet_format(f'{minutes} : 0{seconds}')
+            print(currentTime)
         else:
-            print(f'{minutes}:{seconds}')
-
+            currentTime = pyfiglet.figlet_format(f'{minutes} : {seconds}')
+            print(currentTime)
 
         seconds -= 1
 
@@ -35,7 +39,6 @@ def argToTime(t):
             seconds = 0
 
         sleep(1)
-
 
 time = int(sys.argv[1])
 
