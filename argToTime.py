@@ -10,6 +10,7 @@ def argToTime(t):
     seconds = 59
 
     for i in range(seconds):
+        sleep(1)
         os.system('clear')
 
         if minutes < 10 and seconds < 10:
@@ -24,14 +25,13 @@ def argToTime(t):
         else:
             currentTime = pyfiglet.figlet_format(f'{minutes} : {seconds}')
             print(currentTime)
-
+          
         seconds -= 1
 
         if seconds == 1:
             minutes -= 1
             seconds = 59
 
-        sleep(1)
 
     os.system('clear')
 
