@@ -1,9 +1,7 @@
-# takeTime.py
 import sys
 from time import sleep
 import pyfiglet
 from argToTime import argToTime
-
 
 try:
     time = int(sys.argv[1])
@@ -11,6 +9,7 @@ try:
     sleep(5)
     
     argToTime(time)
+    
 
 except:
     print("No command line arguments passed")

@@ -9,8 +9,7 @@ def argToTime(t):
     minutes = t - 1
     seconds = 59
 
-    for i in range(seconds):
-        sleep(1)
+    for _ in range(seconds):
         os.system('clear')
 
         if minutes < 10 and seconds < 10:
@@ -31,7 +30,8 @@ def argToTime(t):
         if seconds == 1:
             minutes -= 1
             seconds = 59
-
+        
+        sleep(1)
 
     os.system('clear')
 
